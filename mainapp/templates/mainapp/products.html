@@ -37,10 +37,8 @@
 				<div class="description">
 					<h3 class="big-bold">KTM 890 DUKE R </h3>
 					<h3 class="red">горячее предложение</h3>
-					<p class="price"> 1 199 900.0 <span>руб</span></p>
-					<a href="#" class="red-button">
-						заказать <i class="fa fa-chevron-right" aria-hidden="true"></i>
-					</a>
+					<p class="price"> 1 199 900.00 <span>руб.</span></p>
+					<a href="{% url 'basketapp:basket_add' hot_product.pk %}" class="red-button">заказать <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
 					<div class="description-text">
 						<p>БЕСКОМПРОМИССНЫЙ. МАНЕВРЕННЫЙ. МОЩНЫЙ</p>
 						<p>Цветной TFT дисплей</p>
@@ -57,34 +55,17 @@
 					<a class="explore" href="#">Каталог товаров <img src="{% static 'img/arrow.png' %}" alt=""></a>
 				</div>
 				<div class="related-products clearfix">
+					{% for product in same_products %}
 					<div class="block">
-						<a href="#"><img src="{% static 'img/imgonline-com-ua-Resize-5UiYFneZwgo.jpg' %}" alt="">
+						<a href="{% url 'basketapp:basket_add' product.pk %}"><img src="{% static 'img/imgonline-com-ua-Resize-5UiYFneZwgo.jpg' %}" alt="">
 							<div class="text">
-								<img src="/static/img/icon-hover.png" alt="img">
+								<img src="{% static 'img/icon-hover.png' %}" alt="img">
 								<h4>YAMAHA MT-10 SP</h4>
 								<p>Безоговорочный лидер среди современных стритфайтеров </p>
 							</div>
 						</a>
 					</div>
-					<div class="block">
-						<a href="#"><img src="{% static 'img/imgonline-com-ua-Resize-iDo044UBK6y.jpg' %}" alt="">
-							<div class="text">
-								<img src="/static/img/icon-hover.png" alt="img">
-								<h4>Honda CB1000R</h4>
-								<p>Азарт в каждой детали </p>
-							</div>
-						</a>
-					</div>
-					<div class="block">
-						<a href="#"><img src="{% static 'img/imgonline-com-ua-Resize-dLZldRf7h0Ri.jpg' %}" alt="">
-							<div class="text">
-								<img src="/static/img/icon-hover.png" alt="img">
-								<h4>Ducati Monster 821</h4>
-								<p>Создан для максимального наслаждения движением </p>
-							</div>
-						</a>
-					</div>
-
+					{% endfor %}
 				</div>
 			</div>
 		</div>
