@@ -1,0 +1,12 @@
+<a href="{% url 'index' %}" class="logo"></a>
+<ul class="menu">
+    <li><a href="{% url 'index' %}"
+           class="{% if request.resolver_match.url_name == 'mainapp_index' %}active{% endif %}">На главную</a></li>
+    <li><a href="{% url 'products' %}"
+           class="{% if request.resolver_match.url_name == 'mainapp_products' %}active{% endif %}">Товары</a></li>
+    <li><a href="{% url 'contact' %}"
+           class="{% if request.resolver_match.url_name == 'mainapp_contact' %}active{% endif %}">Связаться с нами</a></li>
+
+</ul>
+<a href="#" class="search"></a>
+<a href="#" class="basket"></a>

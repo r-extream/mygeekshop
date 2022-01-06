@@ -1,0 +1,20 @@
+[
+  {
+    "city": "SPb",
+    "phone": "+7 812 111 2233",
+    "email": "SPb@email.com",
+    "address": "123, SPb Str."
+  },
+  {
+    "city": "Moscow",
+    "phone": "+7 495 222 3344",
+    "email": "Moscow@email.com",
+    "address": "987, Moscow Str."
+  },
+  {
+    "city": "Kazan",
+    "phone": "+7 4879 333 444",
+    "email": "Kazan@email.com",
+    "address": "654, Kazan Str."
+  }
+]
