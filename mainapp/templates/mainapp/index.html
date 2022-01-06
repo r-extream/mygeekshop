@@ -24,24 +24,17 @@
 			<div class="clearfix">
 			</div>
 			<div class="tab-content">
+				{% for product in products %}
 				<div class="block">
 					<a href="#"><img src="{% static 'img/b_f750gs.png' %}" alt="">
 						<div class="text">
 							<img src="{% static 'img/icon-hover.png' %}" alt="img">
-							<h4>BMW F750GS</h4>
-							<p>Ваш пропуск в мир приключений </p>
+							<h4>{{ product.name }}</h4>
+							<p>{{ product.short_description }}</p>
 						</div>
 					</a>
 				</div>
-				<div class="block">
-					<a href="#"><img src="{% static 'img/b_r1250gs.png' %}" alt="">
-						<div class="text">
-							<img src="{% static 'img/icon-hover.png' %}" alt="">
-							<h4>BMW R 1250 GS</h4>
-							<p>И целого мира мало </p>
-						</div>
-					</a>
-				</div>
+				{% endfor %}
 			</div>
 		</div>
 
