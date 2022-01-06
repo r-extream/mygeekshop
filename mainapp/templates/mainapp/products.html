@@ -13,21 +13,21 @@
 			<div class="details-products">
 				<div class="details-slider">
 					<div class="slider-product">
-						<img src="{% static 'img/imgonline-com-ua-Resize-lpcXv7j8LLbO2isn.jpg' %}" alt="slider">
+						<img src="/media/{{ hot_product.image }}" alt="slider">
 					</div>
 					<div class="slider-control">
 						<div class="block">
-							<a href="#"><img src="{% static 'img/imgonline-com-ua-Resize-xcYdqmSP2Ntb.jpg' %}" alt="">
+							<a href="#"><img src="/media/{{ hot_product.image }}" alt="">
 								<div class="text"></div>
 							</a>
 						</div>
 						<div class="block">
-							<a href="#"><img src="{% static 'img/imgonline-com-ua-Resize-oVF1Brnk9f.jpg' %}" alt="">
+							<a href="#"><img src="/media/{{ hot_product.image }}" alt="">
 								<div class="text"></div>
 							</a>
 						</div>
 						<div class="block">
-							<a href="#"><img src="{% static 'img/imgonline-com-ua-Resize-gL1zc4rdIh3gn2h.jpg' %}" alt="">
+							<a href="#"><img src="/media/{{ hot_product.image }}" alt="">
 								<div class="text"></div>
 							</a>
 						</div>
@@ -35,16 +35,14 @@
 				</div>
 
 				<div class="description">
-					<h3 class="big-bold">KTM 890 DUKE R </h3>
+					<h3 class="big-bold">{{ hot_product.name }} </h3>
 					<h3 class="red">горячее предложение</h3>
-					<p class="price"> 1 199 900.00 <span>руб.</span></p>
-					<a href="{% url 'basketapp:basket_add' hot_product.pk %}" class="red-button">заказать <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+					<p class="price"> {{ hot_product.price|floatformat:2 }} <span>руб.</span></p>
+					<a href="{% url 'basketapp:basket_add' hot_product.pk %}" class="red-button">
+						заказать <i class="fa fa-chevron-right" aria-hidden="true"></i>
+					</a>
 					<div class="description-text">
-						<p>БЕСКОМПРОМИССНЫЙ. МАНЕВРЕННЫЙ. МОЩНЫЙ</p>
-						<p>Цветной TFT дисплей</p>
-						<p>Регулируемая подвеска</p>
-						<p>Фирменная графика R-стиля</p>
-						<p>Высочайший уровень эргономики</p>
+						<p>{{ hot_product.short_description }}</p>
 					</div>
 				</div>
 			</div>
@@ -57,11 +55,11 @@
 				<div class="related-products clearfix">
 					{% for product in same_products %}
 					<div class="block">
-						<a href="{% url 'basketapp:basket_add' product.pk %}"><img src="{% static 'img/imgonline-com-ua-Resize-5UiYFneZwgo.jpg' %}" alt="">
+						<a href="{% url 'basketapp:basket_add' product.pk %}"><img src="/media/{{ product.image }}" alt="">
 							<div class="text">
 								<img src="{% static 'img/icon-hover.png' %}" alt="img">
-								<h4>YAMAHA MT-10 SP</h4>
-								<p>Безоговорочный лидер среди современных стритфайтеров </p>
+								<h4>{{ product.name }}</h4>
+								<p>{{ product.short_description }}</p>
 							</div>
 						</a>
 					</div>

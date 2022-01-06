@@ -15,5 +15,10 @@
 </ul>
 <a href="#" class="search"></a>
 <a href="{% url 'basketapp:basket' %}" class="basket">
-    <span>{{ basket.total_count }} - {{ basket.total_price }} p.</span>
+    <span>
+        {% if basket %}
+            {{ basket.0.total_cost|floatformat:2 }} руб.<br>
+            ({{ basket.0.total_quantity }} шт.)
+        {% endif %}
+    </span>
 </a>

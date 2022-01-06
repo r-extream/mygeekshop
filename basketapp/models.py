@@ -10,12 +10,18 @@ class Basket(models.Model):
     quantity = models.PositiveSmallIntegerField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)
 
-    # @classmethod
-    # def get_total_price_and_quantity(cls, user: settings.AUTH_USER_MODEL):
-    #     result_quantity = 0
-    #     result_price = 0
-    #     user_baskets = cls.objects.filter(user=user)
-    #     for basket in user_baskets:
-    #         result_quantity += basket.quantity
-    #         result_price += basket.quantity * basket.product.price
-    #     return {'total_count': result_quantity, 'total_price': result_price}
+    @property
+    def product_cost(self):
+        return self.quantity * self.product.price
+
+    @property
+    def total_quantity(self):
+        items = Basket.objects.filter(user=self.user)
+        _total_quantity = sum(list(map(lambda x: x.quantity, items)))
+        return _total_quantity
+
+    @property
+    def total_cost(self):
+        items = Basket.objects.filter(user=self.user)
+        _total_cost = sum(list(map(lambda x: x.product_cost, items)))
+        return _total_cost
