@@ -1,244 +1,183 @@
 [
     {
-        "category": {
-            "name": "SUPER SPORT",
-            "description": "SUPER SPORT is here"
-        },
+        "category": "SUPER SPORT",
         "name": "BMW HP4",
+        "image": "products_images/b_hp4.png",
         "short_description": "BMW HP4",
         "description": "Инженерный шедевр"
     },
     {
-        "category": {
-            "name": "SUPER SPORT",
-            "description": "SUPER SPORT is here"
-        },
+        "category": "SUPER SPORT",
         "name": "BMW S1000RR",
+        "image": "products_images/b_s1000rr.png",
         "short_description": "BMW S1000RR",
         "description": "Новый эталон скорости"
     },
     {
-        "category": {
-            "name": "SUPER SPORT",
-            "description": "SUPER SPORT is here"
-        },
+        "category": "SUPER SPORT",
         "name": "Ducati SS950",
+        "image": "products_images/d_SS950.png",
         "short_description": "Ducati SS950",
         "description": "Ваш путь в мотоспорт"
     },
     {
-        "category": {
-            "name": "SUPER SPORT",
-            "description": "SUPER SPORT is here"
-        },
+        "category": "SUPER SPORT",
         "name": "Honda CBR1000RR",
+        "image": "products_images/h_cbr1000rr.png",
         "short_description": "Honda CBR1000RR",
         "description": "Быть первым"
     },
     {
-        "category": {
-            "name": "SUPER SPORT",
-            "description": "SUPER SPORT is here"
-        },
+        "category": "SUPER SPORT",
         "name": "KTM 390RC",
+        "image": "products_images/k_390rc.png",
         "short_description": "KTM 390RC",
         "description": "A high-performance Supersports machine"
     },
     {
-        "category": {
-            "name": "SUPER SPORT",
-            "description": "SUPER SPORT is here"
-        },
+        "category": "SUPER SPORT",
         "name": "Yamaha YZF-R1",
+        "image": "products_images/y_yzf-r1.png",
         "short_description": "Yamaha YZF-R1",
         "description": "Самый совершенный серийный супербайк"
     },
     {
-        "category": {
-            "name": "STREET",
-            "description": "STREET is here"
-        },
+        "category": "STREET",
         "name": "BMW R NineT",
+        "image": "products_images/b_rninet.png",
         "short_description": "BMW R NineT",
         "description": "Стиль в кубе"
     },
     {
-        "category": {
-            "name": "STREET",
-            "description": "STREET is here"
-        },
+        "category": "STREET",
         "name": "Ducati Monster",
+        "image": "products_images/d_monster.png",
         "short_description": "Ducati Monster",
         "description": "Быстрый, комфортный и стильный"
     },
     {
-        "category": {
-            "name": "STREET",
-            "description": "STREET is here"
-        },
+        "category": "STREET",
         "name": "Honda CB650R",
+        "image": "products_images/h_cb650r.png",
         "short_description": "Honda CB650R",
         "description": "Нейкед, закаленный городскими улицами"
     },
     {
-        "category": {
-            "name": "STREET",
-            "description": "STREET is here"
-        },
+        "category": "STREET",
         "name": "KTM 890 Duke",
+        "image": "products_images/k_890D.png",
         "short_description": "KTM 890 Duke",
         "description": "Стирает все правила"
     },
     {
-        "category": {
-            "name": "STREET",
-            "description": "STREET is here"
-        },
+        "category": "STREET",
         "name": "Yamaha MT-03",
+        "image": "products_images/y_mt-03.png",
         "short_description": "Yamaha MT-03",
         "description": "Созданный для города"
     },
     {
-        "category": {
-            "name": "STREET",
-            "description": "STREET is here"
-        },
+        "category": "STREET",
         "name": "Yamaha XSR900",
+        "image": "products_images/y_xsr900.png",
         "short_description": "Yamaha XSR900",
         "description": "Дорожный мотоцикл"
     },
     {
-        "category": {
-            "name": "TOURING",
-            "description": "TOURING is here"
-        },
+        "category": "TOURING",
         "name": "BMW K 1600 GTL",
+        "image": "products_images/b_k1600gtl.png",
         "short_description": "BMW K 1600 GTL",
         "description": "Для длительных путешествий вдвоем"
     },
     {
-        "category": {
-            "name": "TOURING",
-            "description": "TOURING is here"
-        },
+        "category": "TOURING",
         "name": "Ducati Multistrada V4",
+        "image": "products_images/d_MV4.png",
         "short_description": "Ducati Multistrada V4",
         "description": "Sportier and more touring, stronger in off-road use and easier in urban action"
     },
     {
-        "category": {
-            "name": "TOURING",
-            "description": "TOURING is here"
-        },
+        "category": "TOURING",
         "name": "KTM 1290 Super Duke R",
+        "image": "products_images/k_1200SD.png",
         "short_description": "KTM 1290 Super Duke R",
         "description": "Мощный малосерийный зверь"
     },
     {
-        "category": {
-            "name": "TOURING",
-            "description": "TOURING is here"
-        },
+        "category": "TOURING",
         "name": "Yamaha FJR 1300",
+        "image": "products_images/y_fjr1300.png",
         "short_description": "Yamaha FJR 1300",
         "description": "Мир комфорта и скорости"
     },
     {
-        "category": {
-            "name": "TOURING",
-            "description": "TOURING is here"
-        },
+        "category": "TOURING",
         "name": "Yamaha MT-09 Tracer",
+        "image": "products_images/y_mt09tr.png",
         "short_description": "Yamaha MT-09 Tracer",
         "description": "Спортивно-туристический мотоцикл"
     },
     {
-        "category": {
-            "name": "CRUISERS",
-            "description": "CRUISERS is here"
-        },
+        "category": "CRUISERS",
         "name": "BMW R 18",
+        "image": "products_images/b_r18.png",
         "short_description": "BMW R 18",
         "description": "Чувство свободы"
     },
     {
-        "category": {
-            "name": "CRUISERS",
-            "description": "CRUISERS is here"
-        },
+        "category": "CRUISERS",
         "name": "Ducati Diavel",
+        "image": "products_images/d_diavel1260.png",
         "short_description": "Ducati Diavel",
         "description": "Второй круизер в истории"
     },
     {
-        "category": {
-            "name": "CRUISERS",
-            "description": "CRUISERS is here"
-        },
+        "category": "CRUISERS",
         "name": "Rebel CMX1100",
+        "image": "products_images/h_cmx1100_rebel.png",
         "short_description": "Rebel CMX1100",
         "description": "Рядная восьмиклапанная «двойка»"
     },
     {
-        "category": {
-            "name": "CRUISERS",
-            "description": "CRUISERS is here"
-        },
-        "name": "Yamaha XV950",
-        "short_description": "Yamaha XV950",
-        "description": "Собирательный образ североамериканского круизера"
-    },
-    {
-        "category": {
-            "name": "ADVENTURE",
-            "description": "ADVENTURE is here"
-        },
+        "category": "ADVENTURE",
         "name": "BMW F 750 GS",
+        "image": "products_images/b_f750gs.png",
         "short_description": "BMW F 750 GS",
         "description": "Пропуск в мир приключений"
     },
     {
-        "category": {
-            "name": "ADVENTURE",
-            "description": "ADVENTURE is here"
-        },
+        "category": "ADVENTURE",
         "name": "BMW R 1250 GS",
+        "image": "products_images/b_r1250gs.png",
         "short_description": "BMW R 1250 GS",
         "description": "Непреодолимых дорог не бывает"
     },
     {
-        "category": {
-            "name": "ADVENTURE",
-            "description": "ADVENTURE is here"
-        },
+        "category": "ADVENTURE",
         "name": "Ducati Hypermotard 950",
+        "image": "products_images/d_hyper950.png",
         "short_description": "Ducati Hypermotard 950",
         "description": "Агрессивный дизайн в сочетании со спортивным и бесстрашным характером"
     },
     {
-        "category": {
-            "name": "ADVENTURE",
-            "description": "ADVENTURE is here"
-        },
+        "category": "ADVENTURE",
         "name": "Honda Africa Twin Adventure",
+        "image": "products_images/h_africatwin_adv.png",
         "short_description": "Honda Africa Twin Adventure",
         "description": "флагманский туристический эндуро"
     },
     {
-        "category": {
-            "name": "ADVENTURE",
-            "description": "ADVENTURE is here"
-        },
+        "category": "ADVENTURE",
         "name": "KTM 1290 Super Adventure",
+        "image": "products_images/k_1290SA.png",
         "short_description": "KTM 1290 Super Adventure",
         "description": "Настоящее приключение"
     },
     {
-        "category": {
-            "name": "ADVENTURE",
-            "description": "ADVENTURE is here"
-        },
+        "category": "ADVENTURE",
         "name": "Yamaha Super Tenere XT1200ZE",
+        "image": "products_images/y_super-tenere.png",
         "short_description": "Yamaha Super Tenere XT1200ZE",
         "description": "Большой туристический эндуро"
     }

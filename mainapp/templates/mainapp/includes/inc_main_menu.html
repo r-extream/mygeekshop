@@ -3,6 +3,14 @@
     <li><a href="{% url 'index' %}" class="{% if request.resolver_match.url_name == 'index' %}active{% endif %}">На главную</a></li>
     <li><a href="{% url 'products:products' %}" class="{% if request.resolver_match.namespace == 'products' %}active{% endif %}">Товары</a></li>
     <li><a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">Связаться с нами</a></li>
+        {% if user.is_authenticated %}
+            <li><a href="{% url 'authapp:edit' %}">{% if user.first_name %}{{ user.first_name }}{% else %}Авторизованный пользователь{% endif %}</a></li>
+            <li><a href="{% url 'authapp:logout' %}">Выйти</a></li>
+        {% else %}
+            <li><a href="{% url 'authapp:register' %}">Регистрация</a></li>
+            <li><a href="{% url 'authapp:login' %}">Войти</a></li>
+        {% endif %}
+    </li>
 
 </ul>
 <a href="#" class="search"></a>
