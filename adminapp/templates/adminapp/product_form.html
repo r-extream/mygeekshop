@@ -6,5 +6,5 @@
         {{ form.as_p }}
         <input type="submit" class="btn btn-primary" value="Сохранить">
     </form>
-    <a href="{% url 'adminapp:categories' %}">К списку продуктов</a>
+    <a href="{% url 'adminapp:products' category.pk %}">К списку продуктов</a>
 {% endblock %}

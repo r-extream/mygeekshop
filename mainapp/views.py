@@ -2,6 +2,7 @@ import json
 import random
 
 from django.conf import settings
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.shortcuts import render, get_object_or_404
 
 from basketapp.models import Basket
@@ -33,7 +34,7 @@ def index(request):
     return render(request, 'mainapp/index.html', context)
 
 
-def products(request, pk=None):
+def products(request, pk=None, page=1):
     links_menu = ProductCategory.objects.all()
     if pk is not None:
         if pk == 0:
@@ -43,9 +44,18 @@ def products(request, pk=None):
             category_item = get_object_or_404(ProductCategory, pk=pk)
             products_list = Product.objects.filter(category__pk=pk)
 
+        # page = reguest.GET.get('page', 1)
+        paginator = Paginator(products_list, 3)
+        try:
+            products_paginator = paginator.page(page)
+        except PageNotAnInteger:
+            products_paginator = paginator.page(1)
+        except EmptyPage:
+            products_paginator = paginator.page(paginator.num_pages)
+
         context = {
             'links_menu': links_menu,
-            'products': products_list,
+            'products': products_paginator,
             'category': category_item,
             'basket': get_basket(request.user)
         }
