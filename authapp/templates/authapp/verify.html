@@ -1,0 +1,15 @@
+{% extends 'authapp/base.html' %}
+{% load static %}
+
+
+{% block content %}
+    {% if user.is_authenticated %}
+        <h1>Аккаунт верифицирован</h1>
+        <p>Вы успешно зарегистрировались</p>
+    {% else %}
+        <h1>Верификация отклонена</h1>
+        <p>Попробуйте снова или обратитесь в поддержку</p>
+    {% endif %}
+    <a class="btn btn-primary form-control" href="{% url 'index' %}">На главную</a>
+
+{% endblock %}

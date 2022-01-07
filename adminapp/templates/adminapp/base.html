@@ -27,6 +27,16 @@
             <li><a href="{% url 'index' %}">Возврат на главную</a></li>
             <li><a href="{% url 'adminapp:users' %}">Зарегистрированные пользователи</a></li>
             <li><a href="{% url 'adminapp:categories' %}">Категории товаров</a></li>
+            <li>
+                <a href="{% url 'basketapp:basket' %}" class="basket">
+                    <span>
+                        {% if basket %}
+                            {{ basket.0.total_cost|floatformat:2 }} руб.<br>
+                            ({{ basket.0.total_quantity }} шт.)
+                        {% endif %}
+                    </span>
+                </a>
+            </li>
         </ul>
     </div>
     {% block content %}
