@@ -1,0 +1,10 @@
+{% extends 'adminapp/base.html' %}
+
+{% block content %}
+    <p>Продукт {{ object.name }} будет удален. Вы уверены?</p>
+    <form method="post">
+    {% csrf_token %}
+    <input type="submit" value="Подтвердить">
+    </form>
+    <a class="btn btn-primary" href="{% url 'adminapp:products' return_pk %}">Отменить удаление</a>
+{% endblock %}
