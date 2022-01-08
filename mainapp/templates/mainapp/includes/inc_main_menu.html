@@ -8,6 +8,7 @@
             <li><a href="{% url 'adminapp:users' %}">Кабинет администратора</a></li>
             {% endif %}
             <li><a href="{% url 'authapp:edit' %}">{% if user.first_name %}{{ user.first_name }}{% else %}Авторизованный пользователь{% endif %}</a></li>
+            <li><a href="{% url 'ordersapp:list' %}">Заказы</a></li>
             <li><a href="{% url 'authapp:logout' %}">Выйти</a></li>
         {% else %}
             <li><a href="{% url 'authapp:register' %}">Регистрация</a></li>

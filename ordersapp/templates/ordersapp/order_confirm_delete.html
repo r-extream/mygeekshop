@@ -1,0 +1,11 @@
+{% extends 'ordersapp/base.html' %}
+
+{% block content %}
+    <h2>Ваш заказ №{{ object.pk }} будет удален. Вы уверены?</h2>
+    {% include 'ordersapp/includes/inc_order_summary.html' %}
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" class="btn btn-danger" value="Подтвердить">
+    </form>
+    <a href="{% url 'ordersapp:list' %}" class="btn btn-info">Отменить удаление</a>
+{% endblock %}
