@@ -2,9 +2,9 @@ from datetime import datetime
 import hashlib, random
 
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm, ValidationError, UserChangeForm
-from django.forms import HiddenInput
+from django.forms import forms, HiddenInput, ModelForm
 
-from authapp.models import ShopUser
+from authapp.models import ShopUser, ShopUserProfile
 
 
 class ShopUserLoginForm(AuthenticationForm):
@@ -65,3 +65,13 @@ class ShopUserEditForm(UserChangeForm):
             raise ValidationError('Изменение данных невозможно. Обратитесь по указанным контактам')
         return data_age
 
+
+class ShopUserProfileForm(ModelForm):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for field_name, field in self.fields.items():
+            field.widget.attrs['class'] = 'form-control'
+
+    class Meta:
+        model = ShopUserProfile
+        fields = ('tag_lines', 'about_me', 'gender')

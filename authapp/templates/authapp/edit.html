@@ -6,6 +6,7 @@
     <form class="form-horizontal" action="{% url 'authapp:edit' %}" method="post">
         {% csrf_token %}
         {{ edit_form.as_p }}
+        {{ edit_profile_form.as_p }}
         <br>
         <input class="form-control" type="submit" value="Сохранить изменения">
         <a class="btn btn-primary form-control" href="{% url 'index' %}">Возврат на главную</a>
