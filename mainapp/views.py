@@ -8,6 +8,20 @@ from django.shortcuts import render, get_object_or_404
 from basketapp.models import Basket
 from mainapp.models import ProductCategory, Product
 
+from django.core.cache import cache
+
+
+def get_links_menu():
+    if settings.LOW_CACHE:
+        key = 'links_menu'
+        links_menu = cache.get(key)
+        if links_menu is None:
+            links_menu = ProductCategory.objects.filter(is_active=True)
+            cache.set(key, links_menu)
+        return links_menu
+    else:
+        return ProductCategory.objects.filter(is_active=True)
+
 
 def get_hot_product():
     return random.sample(list(Product.objects.all()), 1)[0]
@@ -28,7 +42,7 @@ def index(request):
 
 
 def products(request, pk=None, page=1):
-    links_menu = ProductCategory.objects.all()
+    links_menu = get_links_menu()
     if pk is not None:
         if pk == 0:
             category_item = {'name': 'Все', 'pk': 0}
@@ -73,7 +87,7 @@ def contact(request):
 
 
 def product(request, pk):
-    links_menu = ProductCategory.objects.all()
+    links_menu = get_links_menu()
     context = {
         'links_menu': links_menu,
         'product': get_object_or_404(Product, pk=pk)
